@@ -11,7 +11,8 @@ define([
   'bootstrap',
   'angular-sanitize',
   'angular-strap',
-  'extend-jquery'
+  'extend-jquery',
+  'authenticate'
 ],
 function (angular, $, _, appLevelRequire) {
   "use strict";
@@ -135,4 +136,5 @@ function (angular, $, _, appLevelRequire) {
   });
 
   return app;
+
 });
