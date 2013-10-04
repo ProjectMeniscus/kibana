@@ -49,11 +49,13 @@ angular.module('elasticjs.service', [])
       },
       post: function (path, data, successcb, errorcb) {
         path = url + path;
-        return promiseThen($http.post(path, data), successcb, errorcb);
+        var config = {headers: { 'X-AUTH-TOKEN' : AUTH_TOKEN}};
+        return promiseThen($http.post(path, data, config), successcb, errorcb);
       },
       get: function (path, data, successcb, errorcb) {
+        var config = {headers: { 'X-AUTH-TOKEN' : AUTH_TOKEN}};
         path = url + path;
-        return promiseThen($http.get(path, data), successcb, errorcb);
+        return promiseThen($http.get(path, data, config), successcb, errorcb);
       },
       put: function (path, data, successcb, errorcb) {
         path = url + path;

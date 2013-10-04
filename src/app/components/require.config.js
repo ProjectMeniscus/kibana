@@ -37,6 +37,7 @@ require.config({
 
     modernizr:                '../vendor/modernizr-2.6.1',
     elasticjs:                '../vendor/elasticjs/elastic-angular-client',
+    authenticate:             '../vendor/meniscus-auth/authenticate',
   },
   shim: {
     underscore: {
@@ -81,6 +82,7 @@ require.config({
     timepicker:             ['jquery', 'bootstrap'],
     datepicker:             ['jquery', 'bootstrap'],
 
-    elasticjs:              ['angular', '../vendor/elasticjs/elastic']
+    elasticjs:              ['angular', '../vendor/elasticjs/elastic'],
+    authenticate:           ['jquery', 'bootstrap'],
   }
 });

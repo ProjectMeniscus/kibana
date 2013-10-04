@@ -85,7 +85,7 @@ function (angular, $, kbn, _, config, moment, Modernizr) {
           self.script_load(_id);
           break;
         default:
-          self.file_load('default.json');
+          self.file_load('meniscus.json');
         }
 
       // No dashboard in the URL
@@ -97,9 +97,9 @@ function (angular, $, kbn, _, config, moment, Modernizr) {
         ) {
           var dashboard = JSON.parse(window.localStorage['dashboard']);
           self.dash_load(dashboard);
-        // No? Ok, grab default.json, its all we have now
+        // No? Ok, grab meniscus.json, its all we have now
         } else {
-          self.file_load('default.json');
+          self.file_load('meniscus.json');
         }
       }
     };
