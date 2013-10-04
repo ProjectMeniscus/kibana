@@ -31,6 +31,10 @@
       </div>
       <fieldset class="modal-body">
             <div>
+              <label for="projectname-txt">Project Name</label>
+              <input type="text" name="projectname-txt" id="projectname-txt" data-bind="projectname" class="rs-input-large" maxlength="100">
+            </div>
+            <div>
               <label for="username-txt">Username</label>
               <input type="text" name="username-txt" id="username-txt" data-bind="username" class="rs-input-large" maxlength="100">
             </div>
@@ -38,10 +42,9 @@
               <label for="password-txt">Password</label>
               <input type="password" name="password-txt" id="password-txt" data-bind="password" class="rs-input-large" maxlength="100">
             </div>
-
             <input type="hidden" name="type" value="password" id="id_type">
             <button id="login-btn" name="login-btn" class="btn" onclick="authenticate();" aria-hidden="true">Log In</button>
-            <div id="login-error" class="alert alert-error">Invalid Login, check username and password</div>
+            <div id="login-error" class="alert alert-error">Invalid Login, check project name, username and password</div>
       </fieldset>
     </div>
 

@@ -17,7 +17,7 @@ function showLogin() {
     $('#LoginForm').modal();
     window.setTimeout(
       function(){
-        $("#username-txt").focus();
+        $("#projectname-txt").focus();
       }, 1000
     );
       
@@ -25,11 +25,13 @@ function showLogin() {
 }
 
 function authenticate() {
+  var projectname = $("#projectname-txt").val();
 	var username = $("#username-txt").val();
 	var password = $("#password-txt").val();
 
 	var auth_data = {
 		"auth": {
+      "tenantName": projectname ,
 			"passwordCredentials":	{
 				"username": username, 
 				"password": password	
