@@ -1,9 +1,9 @@
 var AUTH_TOKEN = "";
 
-var intervalID = window.setInterval(showLogin, 250);
+var intervalID = window.setInterval(showLogin, 1000);
 
 function isJqueryLoaded() {
-  if (typeof $().modal == 'function') {
+  if (typeof jQuery != 'undefined') {
     return true;
   }
   else {
