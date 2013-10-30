@@ -3,7 +3,7 @@ var AUTH_TOKEN = "";
 var intervalID = window.setInterval(showLogin, 250);
 
 function isJqueryLoaded() {
-  if (typeof jQuery != 'undefined') {
+  if (typeof $().modal == 'function') {
     return true;
   }
   else {
