@@ -1,4 +1,5 @@
 var AUTH_TOKEN = "";
+var TENANT_NAME = "";
 
 var intervalID = window.setInterval(showLogin, 1000);
 
@@ -46,9 +47,9 @@ function authenticate() {
       data: JSON.stringify(auth_data),
       dataType: "text",
       success: function( data ) {
-
         var returnedJsonObj = JSON.parse(data);
         AUTH_TOKEN = returnedJsonObj["access"]["token"]["id"];
+        TENANT_NAME = returnedJsonObj["access"]["token"]["tenant"]["name"];
         $('#LoginForm').modal('hide');
       },
       error: function( err ){
