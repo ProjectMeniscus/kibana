@@ -53,8 +53,8 @@ angular.module('elasticjs.service', [])
         return promiseThen($http.post(path, data, config), successcb, errorcb);
       },
       get: function (path, data, successcb, errorcb) {
-        var config = {headers: { 'X-Auth-Token' : AUTH_TOKEN, 'X-Tenant-Name': TENANT_NAME}};
         path = url + path;
+        var config = {headers: { 'X-Auth-Token' : AUTH_TOKEN, 'X-Tenant-Name': TENANT_NAME}};
         return promiseThen($http.get(path, data, config), successcb, errorcb);
       },
       put: function (path, data, successcb, errorcb) {
